@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import DsaAvatar from './avatars/dsa.jpg';
+import MvbAvatar from './avatars/mvb.jpg';
+import AksAvatar from './avatars/aks.jpg';
+import LfmAvatar from './avatars/lfm.jpg';
+import MegAvatar from './avatars/meg.jpg';
+import MlmAvatar from './avatars/mlm.jpg';
+
+
 const payers = {
-  'dsa': { name: 'Daniel'},
-  'mvb': { name: 'Barcos'},
-  'aks': { name: 'Karol'},
-  'lfm': { name: 'Luís'},
-  'meg': { name: 'Duda'},
-  'mlm': { name: 'Mari'}
+  'dsa': { name: 'Daniel', avatar: DsaAvatar},
+  'mvb': { name: 'Barcos', avatar: MvbAvatar},
+  'aks': { name: 'Karol', avatar: AksAvatar},
+  'lfm': { name: 'Luís', avatar: LfmAvatar},
+  'meg': { name: 'Duda', avatar: MegAvatar},
+  'mlm': { name: 'Mari', avatar: MlmAvatar}
 };
 
 const months = ['dsa', 'mvb', 'aks', 'lfm', 'meg', 'mlm', 'dsa', 'mvb', 'aks', 'lfm', 'meg', 'mlm'];
@@ -39,9 +46,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={this.state.payer.avatar} className="App-logo" alt="logo" />
           <p>
-              <h1>{this.state.payer.name}</h1>
+              <h1>{this.state.payer.name} - {currentDate.toLocaleString('pt-BR', {month: 'long'} )}</h1>
             A <code>src/App.js</code> and save to reload.
           </p>
           <a
