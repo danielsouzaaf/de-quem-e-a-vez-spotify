@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/de-quem-e-a-vez-spotify/static/media/mlm.7c99f23e.jpg"
   },
   {
-    "revision": "89e96679ac9a16c8ae214f02e9ff9371",
+    "revision": "ba3ad4775fde38fcbbdce39af4cce24c",
     "url": "/de-quem-e-a-vez-spotify/index.html"
   }
 ];

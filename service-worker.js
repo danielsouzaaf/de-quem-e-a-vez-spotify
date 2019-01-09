@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/de-quem-e-a-vez-spotify/precache-manifest.170b91125ddbfa560e42b95fc5fd3705.js"
+  "/de-quem-e-a-vez-spotify/precache-manifest.9b85002e062916dc3f84c5a55fd6853c.js"
 );
 
 workbox.clientsClaim();
