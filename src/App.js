@@ -20,12 +20,15 @@ const payers = {
 
 const months = ['dsa', 'mvb', 'aks', 'lfm', 'meg', 'mlm', 'dsa', 'mvb', 'aks', 'lfm', 'meg', 'mlm'];
 
+const monthsName = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro',
+    'outubro', 'novembro', 'dezembro'];
+
 const Item = ({currentMonth, month}) => {
   const payer = payers[months[month]];
 
   return (
       <div className={month === currentMonth ? 'App-item-current' : 'App-item'}>
-          {payer.name}
+          {payer.name} - {monthsName[month]}
       </div>
   );
 };
@@ -46,27 +49,20 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+            <h1>Quem paga o Spotify esse mês?</h1>
           <img src={this.state.payer.avatar} className="App-logo" alt="logo" />
           <p>
-              <h1>{this.state.payer.name} - {currentDate.toLocaleString('pt-BR', {month: 'long'} )}</h1>
-            A <code>src/App.js</code> and save to reload.
+            Lista de pagantes do ano
+              {months.map((payerId, month) =>
+                  <Item
+                      currentMonth={this.state.month}
+                      month={month}
+                      key={month}
+                  />
+              )}
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
-          {months.map((payerId, month) =>
-            <Item
-                currentMonth={this.state.month}
-                month={month}
-                key={month}
-              />
-          )}
+
       </div>
     );
   }
