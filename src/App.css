@@ -30,3 +30,13 @@
     transform: rotate(360deg);
   }
 }
+
+.App-item {
+  font-size: 1.1em;
+  margin: 0.5em 0;
+  color: gray;
+}
+
+.App-item-current {
+  font-size: 2em;
+}
